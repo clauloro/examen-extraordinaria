@@ -20,7 +20,7 @@ class Warrior:
             elif position == Position.HIGH:
                 defender.health -= 10
             elif position == Position.LOW:
-                defender.health -= 5 if defender.block else defender.health -= 10
+                defender.health = defender.health - 5 if defender.block else defender.health - 10
             if defender.health <= 0:
                 defender.health = 0
                 defender.deceased = True
@@ -31,4 +31,5 @@ samurai = Warrior('Samurai')
 
 ninja.block = Position.HIGH
 samurai.attack(ninja, Position.LOW)
-print(ninja.health)  # It should print 95
+print(ninja.health) 
+
