@@ -23,3 +23,4 @@ def will_survive(attackers, defenders):
         return False
     else:
         return defender_power >= attacker_power
+    
